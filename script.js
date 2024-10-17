@@ -11,3 +11,9 @@ const mins = time.getMinutes();
 let timeDisplay = document.getElementById('show-time');
 
 timeDisplay.innerText = `The time is ${hours}:${mins}`;
+
+const logButton = document.getElementById('log-button');
+
+logButton.addEventListener('click', function() {
+    console.log(timeDisplay.innerText);
+});
