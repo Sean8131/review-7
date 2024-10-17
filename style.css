@@ -1,0 +1,29 @@
+body {
+    min-height: 100vh;
+    
+}
+
+.app-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    background-color: bisque;
+}
+
+.time-display {
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color:azure;
+}
+
+.button-style {
+    margin:5px;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
