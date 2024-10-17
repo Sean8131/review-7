@@ -1,43 +1,54 @@
-const alertButton = document.getElementById('alert-button');
+// Access 'alert-button' from the DOM.
+const alertButton = document.getElementById("alert-button");
 
-alertButton.addEventListener('click', function() {
-    alert("Stop clicking the button");
+// Add listener to 'alert-button' so browser runs alert when user presses the alert button.
+alertButton.addEventListener("click", function () {
+  alert("Stop clicking the button");
 });
 
+// Create vaiables to access the time from the machine.
 const time = new Date();
 const hours = time.getHours();
 const mins = time.getMinutes();
 
-let timeDisplay = document.getElementById('show-time');
+// Access time display from the DOM.
+let timeDisplay = document.getElementById("show-time");
 
+// Display the current time.
 timeDisplay.innerText = `The time is ${hours}:${mins}`;
 
-const logButton = document.getElementById('log-button');
+// Access log button from the DOM.
+const logButton = document.getElementById("log-button");
 
-logButton.addEventListener('click', function() {
-    console.log(timeDisplay.innerText);
+// Log time to the console when user clicks the log button.
+logButton.addEventListener("click", function () {
+  console.log(timeDisplay.innerText);
 });
 
-const blueButton = document.getElementById('blue-button');
+// Access blue button from the DOM.
+const blueButton = document.getElementById("blue-button");
 
-const whiteButton = document.getElementById('white-button');
+// Access white button from the DOM.
+const whiteButton = document.getElementById("white-button");
 
-const alertChangeBlue = document.getElementById('alert-button');
-const logChangeBlue = document.getElementById('log-button');
-const blueChangeBlue = document.getElementById('blue-button');
-const whiteChangeBlue = document.getElementById('white-button');
+// Bring elements into JS so their style can be changed.
+const alertChangeBlue = document.getElementById("alert-button");
+const logChangeBlue = document.getElementById("log-button");
+const blueChangeBlue = document.getElementById("blue-button");
+const whiteChangeBlue = document.getElementById("white-button");
 
-
-blueButton.addEventListener('click', function() {
-    alertChangeBlue.style.backgroundColor = 'blue';
-    logChangeBlue.style.backgroundColor = 'blue';
-    blueChangeBlue.style.backgroundColor = 'blue';
-    whiteChangeBlue.style.backgroundColor = 'blue';
+// When the user clicks the blue button, all the buttons turn blue.
+blueButton.addEventListener("click", function () {
+  alertChangeBlue.style.backgroundColor = "blue";
+  logChangeBlue.style.backgroundColor = "blue";
+  blueChangeBlue.style.backgroundColor = "blue";
+  whiteChangeBlue.style.backgroundColor = "blue";
 });
 
-whiteButton.addEventListener('click', function() {
-    alertChangeBlue.style.backgroundColor = 'white';
-    logChangeBlue.style.backgroundColor = 'white';
-    blueChangeBlue.style.backgroundColor = 'white';
-    whiteChangeBlue.style.backgroundColor = 'white';
+// When the user clicks the white button, all the buttons turn white.
+whiteButton.addEventListener("click", function () {
+  alertChangeBlue.style.backgroundColor = "white";
+  logChangeBlue.style.backgroundColor = "white";
+  blueChangeBlue.style.backgroundColor = "white";
+  whiteChangeBlue.style.backgroundColor = "white";
 });
