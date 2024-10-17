@@ -20,6 +20,8 @@ logButton.addEventListener('click', function() {
 
 const blueButton = document.getElementById('blue-button');
 
+const whiteButton = document.getElementById('white-button');
+
 const alertChangeBlue = document.getElementById('alert-button');
 const logChangeBlue = document.getElementById('log-button');
 const blueChangeBlue = document.getElementById('blue-button');
@@ -31,4 +33,11 @@ blueButton.addEventListener('click', function() {
     logChangeBlue.style.backgroundColor = 'blue';
     blueChangeBlue.style.backgroundColor = 'blue';
     whiteChangeBlue.style.backgroundColor = 'blue';
+});
+
+whiteButton.addEventListener('click', function() {
+    alertChangeBlue.style.backgroundColor = 'white';
+    logChangeBlue.style.backgroundColor = 'white';
+    blueChangeBlue.style.backgroundColor = 'white';
+    whiteChangeBlue.style.backgroundColor = 'white';
 });
