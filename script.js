@@ -40,11 +40,25 @@ const blueChangeBlue = document.getElementById("blue-button");
 const whiteChangeBlue = document.getElementById("white-button");
 
 // When the user clicks the blue button, all the buttons turn blue.
+// blueButton.addEventListener("click", function () {
+//   alertChangeBlue.style.backgroundColor = "blue";
+//   logChangeBlue.style.backgroundColor = "blue";
+//   blueChangeBlue.style.backgroundColor = "blue";
+//   whiteChangeBlue.style.backgroundColor = "blue";
+// });
+
+// Writing the above code using an array and an arrow function.
+
+const buttons = [
+  document.getElementById("alert-button"),
+  document.getElementById("log-button"),
+  document.getElementById("blue-button"),
+  document.getElementById("white-button"),
+];
+
 blueButton.addEventListener("click", function () {
-  alertChangeBlue.style.backgroundColor = "blue";
-  logChangeBlue.style.backgroundColor = "blue";
-  blueChangeBlue.style.backgroundColor = "blue";
-  whiteChangeBlue.style.backgroundColor = "blue";
+    buttons.forEach(button => button.style.backgroundColor = "blue");
+    buttons.forEach(button => button.style.color = "white");
 });
 
 // When the user clicks the white button, all the buttons turn white.
