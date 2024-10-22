@@ -3,7 +3,7 @@ const alertButton = document.getElementById("alert-button");
 
 // Add listener to 'alert-button' so browser runs alert when user presses the alert button.
 alertButton.addEventListener("click", function () {
-  alert("Stop clicking the button");
+  alert("You just clicked the alert button");
 });
 
 // Create vaiables to access the time from the machine.
@@ -39,15 +39,7 @@ const logChangeBlue = document.getElementById("log-button");
 const blueChangeBlue = document.getElementById("blue-button");
 const whiteChangeBlue = document.getElementById("white-button");
 
-// When the user clicks the blue button, all the buttons turn blue.
-// blueButton.addEventListener("click", function () {
-//   alertChangeBlue.style.backgroundColor = "blue";
-//   logChangeBlue.style.backgroundColor = "blue";
-//   blueChangeBlue.style.backgroundColor = "blue";
-//   whiteChangeBlue.style.backgroundColor = "blue";
-// });
-
-// Writing the above code using an array and an arrow function.
+// When the user clicks the blue button, all the buttons turn blue and the text turns
 
 const buttons = [
   document.getElementById("alert-button"),
@@ -57,14 +49,19 @@ const buttons = [
 ];
 
 blueButton.addEventListener("click", function () {
-    buttons.forEach(button => button.style.backgroundColor = "blue");
-    buttons.forEach(button => button.style.color = "white");
+    buttons.forEach(function(button){
+      button.style.backgroundColor = "blue"; 
+      button.style.color = "white";
+    });
+    buttons.forEach((button) => {
+      button.style.backgroundColor = "blue"; 
+      button.style.color = "white";
+    });
+    buttons.forEach(button => {button.style.backgroundColor = "blue"; button.style.color = "white"});
 });
 
-// When the user clicks the white button, all the buttons turn white.
+// When the user clicks the white button, all the buttons turn white and the text turns black.
 whiteButton.addEventListener("click", function () {
-  alertChangeBlue.style.backgroundColor = "white";
-  logChangeBlue.style.backgroundColor = "white";
-  blueChangeBlue.style.backgroundColor = "white";
-  whiteChangeBlue.style.backgroundColor = "white";
+    buttons.forEach(button => button.style.backgroundColor = 'white');
+    buttons.forEach(button => button.style = 'black');
 });
