@@ -9,7 +9,9 @@ alertButton.addEventListener("click", function () {
 // Create vaiables to access the time from the machine.
 const time = new Date();
 const hours = time.getHours();
-const mins = time.getMinutes();
+
+// Add a zero to the start of the minutes string
+mins = time.getMinutes().toString().padStart(2, "0");
 
 // Access time display from the DOM.
 let timeDisplay = document.getElementById("show-time");
