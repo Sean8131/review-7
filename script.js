@@ -33,14 +33,14 @@ const blueButton = document.getElementById("blue-button");
 // Access white button from the DOM.
 const whiteButton = document.getElementById("white-button");
 
-// Bring elements into JS so their style can be changed.
-const alertChangeBlue = document.getElementById("alert-button");
-const logChangeBlue = document.getElementById("log-button");
-const blueChangeBlue = document.getElementById("blue-button");
-const whiteChangeBlue = document.getElementById("white-button");
+// Bring elements into JS so their style can be changed. Commented out because I created an array below.
 
-// When the user clicks the blue button, all the buttons turn blue and the text turns
+// const alertChangeBlue = document.getElementById("alert-button");
+// const logChangeBlue = document.getElementById("log-button");
+// const blueChangeBlue = document.getElementById("blue-button");
+// const whiteChangeBlue = document.getElementById("white-button");
 
+// Created buttons array to bring elements into JS and enable iteration over buttons.
 const buttons = [
   document.getElementById("alert-button"),
   document.getElementById("log-button"),
@@ -48,20 +48,35 @@ const buttons = [
   document.getElementById("white-button"),
 ];
 
+// When the user clicks the blue button, all the buttons turn blue and the text turns white.
+
 blueButton.addEventListener("click", function () {
-    buttons.forEach(function(button){
-      button.style.backgroundColor = "blue"; 
-      button.style.color = "white";
-    });
-    buttons.forEach((button) => {
-      button.style.backgroundColor = "blue"; 
-      button.style.color = "white";
-    });
-    buttons.forEach(button => {button.style.backgroundColor = "blue"; button.style.color = "white"});
+  // How I had refactored the forEach method as an arrow function (best option).
+  buttons.forEach((button) => {
+    button.style.backgroundColor = "blue";
+    button.style.color = "white";
+  });
+  // How I refactored the forEach method into an anonymous function with Josh (2nd best option).
+  buttons.forEach(function (button) {
+    button.style.backgroundColor = "blue";
+    button.style.color = "white";
+  });
+  // How I refactored the forEach method back into an arrow function with Josh (3rd best option).
+  buttons.forEach((button) => {
+    button.style.backgroundColor = "blue";
+    button.style.color = "white";
+  });
 });
 
 // When the user clicks the white button, all the buttons turn white and the text turns black.
 whiteButton.addEventListener("click", function () {
-    buttons.forEach(button => button.style.backgroundColor = 'white');
-    buttons.forEach(button => button.style = 'black');
+
+  // Initial refactoring using forEach method.
+  buttons.forEach((button) => (button.style.backgroundColor = "white"));
+  buttons.forEach((button) => (button.style = "black"));
+  // Second refactoring using forEach method.
+  buttons.forEach((button) => {
+    button.style.backgroundColor = "white";
+    button.style = "black"
+  })
 });
